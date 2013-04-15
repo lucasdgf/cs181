@@ -1,0 +1,146 @@
+%% HELP WE'RE GOING TO DIE
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage{enumerate}
+\usepackage{fullpage}
+
+\title{CS181 Homework 2}
+\author{Lucas Freitas and Angela Li}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Perceptrons}
+
+\begin{enumerate}
+
+\item %% 1.1
+This feature \textbf{cannot} be recognized by a perceptron. Even using weights, the two features will be in a distribution that is not linearly separable. If we make weights be $1$, and input for a pixel be $1$ if the pixel is on, or $-1$ if it is off. The distribution would be similar to image below (credit to Lecture slides), considering blue dots to be data that is at least $75\%$ bright or dark, and red to be data that is not. 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=80mm]{hw211.png}
+\caption{Distribution of points for item $1$}
+\end{figure}
+
+It is easy to see that the data is not linearly separable, and the classification cannot be done with perceptrons alone. If we use high-level features, however, such that $\phi(x_i)=x_i^2$, the features become linearly separable (again, credit to Lecture slides):
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=80mm]{hw2112.png}
+\caption{Distribution of points from item $1$ after applying $\phi(x_i)=x_i^2$}
+\end{figure}
+
+\item %% 1.2
+Those two features \textbf{can} be recognized by a perceptron. For this classification, we can use the following matrix of weights, considering that $x_i$ for each pixel is $1$ if the pixel is on, or $0$ if the pixel is off:
+
+$$M=\begin{bmatrix}
+      2&2&2           \\[0.3em]
+      -1&-1&-1 \\[0.3em]
+       -1&-1&-1
+     \end{bmatrix}$$
+
+That way, if $\sum_k{x_kw_k}$ is positive, we have a larger fraction of pixels in the top row, and if negative, the larger fraction is in the bottom two rows.
+x
+\item %% 1.3
+Just like in item $1$, this feature \textbf{cannot} be recognized by a perceptron. Perceptrons would look at the local features of each pixel (checking whether it is on or off), but not at the relationship between two or more of them. That relationship is essential, however, for this classification problem, since connectedness depends on the combined configuration of adjacent pixels, which makes connectedness a non-linearly separable feature.
+
+\end{enumerate}
+
+\section{Problem 2}
+ 
+%% 2
+
+\section{Problem 3}
+
+\begin{enumerate}
+
+\item %% 3.1
+
+\item %% 3.2
+
+\item %% 3.3
+
+\item
+
+\begin{enumerate}[(a)]
+
+\item %% 3.4.a
+
+\item %% 3.4.b
+
+\item %% 3.4.c
+
+\item %% 3.4.d
+
+\end{enumerate}
+
+\item %% 3.5
+
+\item
+
+\begin{enumerate}[(a)]
+
+\item %% 3.6.a
+
+\item 
+
+\begin{enumerate}[i.]
+
+\item %% 3.6.b.i
+
+\item %% 3.6.b.ii
+
+\item %% 3.6.b.iii
+
+\end{enumerate}
+
+\item %% 3.6.c
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}[(a)]
+
+\item %% 3.7.a
+
+\item %% 3.7.b
+
+\item %% 3.7.c
+
+\item %% 3.7.d
+
+\item %% 3.7.e
+
+\item %% 3.7.f
+
+\end{enumerate}
+
+\item
+
+\begin{enumerate}[(a)]
+
+\item %% 3.8.a
+
+\item %% 3.8.b
+
+\end{enumerate}
+
+\end{enumerate}
+
+\section{Problem 4}
+
+\begin{enumerate}
+
+\item %% 4.1
+
+\item %% 4.2
+
+\end{enumerate}
+
+\end{document}
